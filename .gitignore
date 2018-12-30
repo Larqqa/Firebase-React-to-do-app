@@ -23,7 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Config files for firebase
-src/Config/config.js
+src/Config/Development_config.js
+src/Config/Production_config.js
 database*
 firebase*
 .firebase*

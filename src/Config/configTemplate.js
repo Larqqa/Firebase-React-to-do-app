@@ -1,5 +1,8 @@
 import firebase from "firebase/app";
 
+// If multiple backends are available, seperate Development server from Production
+// These are made in to seperate files and controlled in app.js
+
 const DB_CONFIG = {
   apiKey: "Your Key",
   authDomain: "Your Key",

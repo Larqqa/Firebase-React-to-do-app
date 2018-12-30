@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Note from './Note/Note';
 import NoteForm from './NoteForm/NoteForm';
-import firebase from './Config/config';
+// Which server is to be used? Commented wont show in build
+//import firebase from './Config/Development_config';
+import firebase from './Config/Production_config';
 import 'firebase/database';
 import 'firebase/auth';
 import Login from './UserConfig/Login-Logout';
