@@ -1,0 +1,82 @@
+$Padding: 1rem;
+.App {
+  form {
+    margin: .2rem 0;
+    input {
+      margin-right: $Padding;
+      padding:.2rem .5rem .2rem .5rem;
+      border: none;
+      border-radius: .7rem;
+    }
+  }
+  button {
+    border: none;
+    border-radius: .7rem;
+    padding:.2rem .5rem .2rem .5rem;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      outline: none;
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 0px 2px 5px #666;
+    }
+  }
+  .App-header {
+    background-color: #444;
+    text-align: center;
+    color: white;
+
+    .notesHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 $Padding 0 $Padding;
+
+      .loginWrapper form {
+        input {
+          transition: box-shadow 0.3s ease-in-out;
+          &:focus {
+            outline: none;
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 2px 5px #111;
+          }
+        }
+        button:hover {
+          outline: none;
+          transition: box-shadow 0.3s ease-in-out;
+          box-shadow: 0px 2px 5px #666;
+        }
+        ::placeholder {
+          color: #ccc;
+        }
+      }
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .loginWrapper {
+      text-align: right;
+    }
+  }
+  .appBody {
+    padding: $Padding;
+
+    form {
+      input {
+        background: #eee;
+        color: #444;
+        transition: box-shadow 0.3s ease-in-out;
+        &:focus {
+          outline: none;
+          transition: box-shadow 0.3s ease-in-out;
+          box-shadow: 0px 2px 5px #666;
+        }
+      }
+      ::placeholder {
+        color: #bbb;
+      }
+    }
+  }
+}

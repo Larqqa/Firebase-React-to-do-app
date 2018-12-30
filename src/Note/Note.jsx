@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Note.css';
+import './Note.scss';
 import propTypes from 'prop-types';
 
 class Note extends Component{

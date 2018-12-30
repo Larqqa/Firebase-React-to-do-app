@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './NoteForm.css';
+import './NoteForm.scss';
 
 class NoteForm extends Component{
   constructor(props){
@@ -39,12 +39,10 @@ class NoteForm extends Component{
     const isInvalid = newNoteContent === '';
 
     return(
-      <div className="formWrapper">
-        <form onSubmit={this.newNote}>
-          <input className="noteInput" placeholder="Write some shit!" name="toDo"  value={this.state.newNoteContent} onChange={this.handleUserInput} />
-          <button type="submit" className="NoteButton" disabled={isInvalid}>Add Note!</button>
-        </form>
-      </div>
+      <form className="formWrapper" onSubmit={this.newNote}>
+        <input className="noteInput" placeholder="Write some shit!" name="toDo"  value={this.state.newNoteContent} onChange={this.handleUserInput} />
+        <button type="submit" className="NoteButton" disabled={isInvalid}>Add Note!</button>
+      </form>
     )
   }
 }

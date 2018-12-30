@@ -7,7 +7,7 @@ import firebase from './Config/Production_config';
 import 'firebase/database';
 import 'firebase/auth';
 import Login from './UserConfig/Login-Logout';
-import './App.css';
+import './App.scss';
 
 // Set values for initial state of login
 // Used for clearing the fields
@@ -103,13 +103,18 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="notesHeader">
-            <h1>React  Firebase To-Do list</h1>
-            <p>{this.state.login}</p>
-            <Login firebase={firebase} INITIAL_STATE={INITIAL_STATE} state={this.state} isAuth={this.isAuth} getNotes={this.getNotes} />
+            <h1 className="heading">React  Firebase To-Do list</h1>
+            <div className="loginWrapper">
+              <p className="loginInfo">{this.state.login}</p>
+              <Login firebase={firebase} INITIAL_STATE={INITIAL_STATE} state={this.state} isAuth={this.isAuth} getNotes={this.getNotes} />
+            </div>
           </div>
         </header>
-        <div className="notesWrapper">
+        <div className="appBody">
           <div className="notesBody">
+            <div className="notesAdd">
+              <NoteForm addNote={this.addNote} />
+            </div>
             {
               this.state.notes.map((note) => {
                 return(
@@ -117,9 +122,6 @@ class App extends Component {
                 )
               })
             }
-          </div>
-          <div className="notesFooter">
-            <NoteForm addNote={this.addNote} />
           </div>
         </div>
       </div>
